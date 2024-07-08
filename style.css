@@ -1,0 +1,680 @@
+body {
+  margin: 0;
+}
+
+#main_nav {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.926);
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  height: 5%;
+  z-index: 4;
+}
+#main_nav a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#main_nav a:hover {
+  color: lightgray;
+}
+#main_nav a:active {
+  color: rgb(228, 228, 228);
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 76vh;
+  justify-content: space-around;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+#nav__container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#header__images {
+  width: 20%;
+}
+#myH1 {
+  font-size: 100px;
+  color: rgba(0, 0, 0, 0.926);
+}
+h3 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.672);
+  font-weight: lighter;
+}
+.image-container {
+  position: relative;
+  width: 400px;
+}
+
+.background-image {
+  position: absolute;
+  top: -180px;
+  left: -120px;
+  width: 100%;
+  z-index: 1;
+}
+
+.foreground-image {
+  position: absolute;
+  top: 50px;
+  right: -10px;
+  width: 75%;
+  z-index: 2;
+}
+#my_nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.my-buttons {
+  width: 180px;
+  height: 70px;
+  border: none;
+  border-radius: 25px;
+  background-color: rgb(67, 67, 67);
+  color: white;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.my-buttons:hover {
+  animation: vibrate 0.4s 1;
+}
+
+@keyframes vibrate {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+}
+
+.my-buttons a {
+  text-decoration: none;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.my-buttons:hover {
+  background-color: rgb(104, 104, 104);
+}
+.my-buttons:active {
+  background-color: rgb(164, 163, 163);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350vh;
+}
+
+#biografia {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(/images/wing.jpg);
+  background-size: cover;
+  margin-top: 100px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#biografia__container-foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  justify-content: space-evenly;
+}
+
+.my-buttons__biografia {
+  height: 40px;
+  width: 200px;
+  border: none;
+  background-color: rgba(66, 66, 66, 0.567);
+  border-radius: 5px;
+  color: white;
+}
+.my-buttons__biografia:hover {
+  background-color: rgba(100, 100, 100, 0.567);
+}
+
+.my-buttons__biografia:active {
+  background-color: rgba(142, 142, 142, 0.567);
+}
+
+#descripcion__biografia {
+  display: flex;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  width: 40%;
+  max-height: 70%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  #biografia {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .biografia-img,
+  #descripcion__biografia {
+    max-width: 100%;
+    margin: 5px;
+  }
+
+  #descripcion__biografia {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+#descripcion__biografia h2 {
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#descripcion__biografia p {
+  font-size: 20px;
+  line-height: 35px;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+#biografia img {
+  border-radius: 5px;
+}
+#discografia {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+}
+#discografia h2 {
+  background-color: black;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-family: arial;
+  font-size: 40px;
+  margin: 0;
+  height: 8vh;
+}
+
+#container__discografia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  height: 90%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+#container__discografia div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#container__discografia div img {
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+#container__discografia div img:hover {
+  transform: scale(1.1);
+}
+#merch {
+  width: 100%;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+}
+
+.carousel-img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.carousel-a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+#redes-sociales {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 5%;
+  width: 100%;
+}
+#redes-sociales__icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 10vh;
+  width: 100%;
+  margin-top: 20px;
+}
+
+#redes-sociales__icons a img {
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+#redes-sociales__icons a img:hover {
+  transform: scale(1.3);
+}
+
+#container__discografia div a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#body_kids {
+  background-color: rgba(0, 0, 0, 0.966);
+}
+
+#kids {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0)
+    ),
+    url(/images/kids.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#kids::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+}
+
+#kids h1 {
+  color: rgba(255, 255, 255, 0.681);
+  backdrop-filter: blur(3px);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.branch__albums {
+  width: 100%;
+  height: 10vh;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  align-items: center;
+}
+
+.container__albums {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100vh;
+  flex-direction: row;
+}
+
+.container__iframe {
+  display: flex;
+  width: 40%;
+  height: 75%;
+  justify-content: center;
+  align-items: center;
+}
+.container__info-albums {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  width: 40%;
+  height: 75%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.branch__albums-p {
+  overflow-y: scroll;
+}
+
+#myH2 {
+  color: rgba(255, 255, 255, 0.781);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.branch__albums-p {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 40px;
+  font-size: 25px;
+}
+.container__icons-albums {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  transition: transform 0.5s ease;
+}
+
+.container__icons-albums img {
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.container__icons-albums img:hover {
+  transform: scale(1.2);
+}
+
+.footer__discos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+}
+
+#best_day {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.089),
+      rgb(0, 0, 0)
+    ),
+    url(/images/best\ day.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#love_life {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/love.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#blue_slide {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/blue.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#macadelic {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/macadelic2.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#lovestein {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/larry_back.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+#watching__movies_header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/movies.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#faces__header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/faces.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#goodam__header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/goodam.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#divine__header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/divine.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#circles__header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/circles.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#swimming__header {
+  width: 100%;
+  height: 60vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 10)
+    ),
+    url(/images/swimming.gif);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#body__store {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#header__store {
+  width: 100%;
+  height: 20%;
+}
+
+#header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  height: 100%;
+}
+
+#icon__store {
+  display: flex;
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+}
+#myH1__store {
+  font-size: 40px;
+}
+
+#store__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  height: 330vh;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#store__container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#store__container div img {
+  cursor: pointer;
+}
+
+.scroll-arrow {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  text-align: center;
+  line-height: 1;
+  width: 20px;
+}
+
+.scroll-arrow-up:hover {
+  background-color: #555;
+}
+
+#mobile-message {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  #mobile-message {
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20%;
+    color: #000;
+  }
+  #mobile-message__2 {
+    display: block;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20%;
+    color: #fffcfc;
+  }
+  body > * {
+    display: none;
+  }
+  #main_nav {
+    display: none;
+  }
+  .container__albums {
+    display: none;
+  }
+  .footer__discos {
+    display: none;
+  }
+  #store__container {
+    display: none;
+  }
+}

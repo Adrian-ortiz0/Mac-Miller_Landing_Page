@@ -647,6 +647,10 @@ main {
   display: none;
 }
 
+#mobile-message__2 {
+  display: none;
+}
+
 @media (max-width: 800px) {
   #mobile-message {
     display: block;

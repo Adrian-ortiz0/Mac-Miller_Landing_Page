@@ -98,15 +98,28 @@ Este sitio web tiene como objetivo proporcionar una plataforma en línea donde l
 Estructura del sitio web
 
 Primera sección
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/876c45b5-d843-40a6-8857-7c855c3b71c9)
+
  
 Esta sección se compone de un nav bar con el fin de brindar accesibilidad al usuario a todas las secciones del sitio web, luego se encuentra un titulo con el nombre del artista y debajo una cita en tono de tributo al fallecimiento de este. Justo debajo de esta cita se encuentran unos botones que también conducen a las diversas secciones del sitio web, este funciona mas en tono decorativo. Como toque extra se colocan dos imágenes al costado derecho de la página.
 Segunda Sección
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/772123e4-1849-4e4c-a3fd-5619b10b138d)
+
  
 En la segunda sección podemos encontrarnos una breve descripción/biografía de Mac Miller, se incluye un botón de conocer mas para poder leer la biografía completa del artista en Wikipedia
 
 Tercera Sección
 
- 
+ ![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/78c68dab-cf3d-4128-b593-c503de979d49)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/7c1bd7c0-5967-4bf9-87f5-b371d41fe1e4)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/d6725b45-9261-434f-b1c9-fb3c18cd0324)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/ee7a943d-3049-445e-bbb6-ee498fb7052d)
+
 
 La sección de discografía incluye los 12 proyectos principales de Mac Miller, cada uno de estos iconos redirige a la pagina del disco, en las cuales se podrá encontrar un pequeño reproductor, un video o imagen promocional del disco y una breve descripción del disco y el impacto en la carrera de Mac Miller.
  
@@ -119,7 +132,10 @@ A continuación, vamos a dar clic en el disco The Divine Feminine, este debe red
 Como podemos apreciar, la pagina cuenta con un reproductor, acceso a las plataformas de streaming donde se puede escuchar el álbum y una breve descripción del disco.
 Cuarta Sección
 
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/1e705a94-e50b-4cb7-80fa-5b42f9250b45)
  
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/273d9681-2d2b-400b-8a1c-2643c473a131)
+
 
 En la sección de la merch encontramos un carousel que muestra distintas ofertas y promociones dentro de la tienda, para poder ingresar a la tienda debemos dar clic en esta primera imagen.
  
@@ -127,9 +143,7 @@ En la sección de la merch encontramos un carousel que muestra distintas ofertas
 Al dar clic se ingresa en la tienda de la pagina web, esta tienda también fue diseñada enteramente por mí. En la tienda podemos simplemente observar la mercancía disponible y si deseamos volver al menú principal podemos dar clic al icono de la esquina izquierda superior.
 Quinta Sección
 
-![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/63df41b3-9a61-4929-a6dc-eb57c7b9832a)
-
- 
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/4d369a55-815b-4716-a7fc-4737a501477f)
 
 En la sección de redes sociales encontraremos las 3 redes sociales que solía manejar Mac Miller, se tomó la decisión de no expandirse mucho en esta área debido a que por obvias razones las redes de Mac Miller ya no son de gran importancia. Cada uno de los iconos redirige a las redes de este.
 Estado del proyecto
@@ -147,4 +161,14 @@ Bugs y posibles fallos
 •	Provisionalmente agregamos un “overflow: scroll” con el fin de que la información de los <p> no se salga de los contenedores
 PRIMEROS DISEÑOS
   
-   
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/94829bd5-abc7-4d59-a2b6-9fd5956be905)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/567fee0d-3153-401c-a298-6a2a516c9da3)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/e3d5319e-a4de-4e83-96ae-735d5268e817)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/d8db93e0-aff0-4d10-bde6-b7ee4d26427c)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/019aea51-1d93-497e-ab82-e7b2b02176ef)
+
+![image](https://github.com/Adrian-ortiz0/PROYECTO-FILTRO_USTARIZ_ADRIAN/assets/153449960/2f519399-8b3b-4dd1-ac9e-dbc81e17cf7a)

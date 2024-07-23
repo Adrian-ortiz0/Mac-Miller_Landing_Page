@@ -1,34 +1,19 @@
+# MAC MILLER LANDING PAGE
 
-[Readme.pdf](https://github.com/user-attachments/files/16121586/Readme.pdf)
+Esta landing page esta dedicada a la obra y vida de Mac Miller, esta hecha con el fin de dar a conocer sus proyectos musicales e informar acerca de su vida. Tambien se cuenta con un apartado dedicado a la mercancia de este artista con el finde que los usuarios puedan ver los productos disponibles del artista.
 
-MAC MILLER LANDING PAGE
+![Imagen del Proyecto](/images/mac_miller.png)
 
-Contenido
+## Tabla de contenidos
 
-Descripción del proyecto	2
-# Mac Miller Tribute Page	2
-## Estructura del Proyecto	2
-### Secciones Principales	2
-1. **Navegación**:	2
-2. **Header**:	2
-3. **Biografía**:	3
-4. **Discografía**:	3
-5. **Merch**:	3
-6. **Redes Sociales**:	3
-## Recursos Utilizados	3
-## Instalación	3
-## Uso	4
-## Contribuciones	4
-## Licencia	4
-Estructura del sitio web	4
-Estado del proyecto	9
-Requisitos del entorno de desarrollo	9
-Tecnologías usadas	9
-Bugs y posibles fallos	9
+- [Descripción](#descripción)
+- [Estructura](#estructura)
+- [Contenido](#contenido)
+- [Uso](#uso)
+- [Tecnologias usadas](#tecnologias)
+- [Estado del proyecto](#estado)
 
-
-Descripción del proyecto 
-# Mac Miller Tribute Page
+## Descripción del proyecto 
 
 Esta es una página tributo dedicada a Mac Miller, diseñada para proporcionar información sobre su vida, discografía y enlaces a su mercancía y redes sociales.
 
@@ -41,7 +26,7 @@ Este proyecto está compuesto por los siguientes archivos y directorios:
 -	`/images`: Un directorio que contiene todas las imágenes utilizadas en la página.
 -	Varios archivos HTML para las páginas individuales de los álbumes.
 
-## Contenido de la Página
+# Contenido de la Página
 
 ### Secciones Principales
 
@@ -71,7 +56,7 @@ Este proyecto está compuesto por los siguientes archivos y directorios:
 
 ## Recursos Utilizados
 
-- [Bootstrap 5.3.3](https://getbootstrap.com/) para el diseño responsivo y componentes de UI.
+- [Bootstrap 5.3.3](https://getbootstrap.com/) para el diseño responsivo y la utilización del carrusel para la sección de tienda.
 - Imágenes y recursos gráficos almacenados en el directorio `/images`.
 
 ## Instalación
@@ -83,14 +68,6 @@ Este proyecto está compuesto por los siguientes archivos y directorios:
 ## Uso
 
 Navega a través de las diferentes secciones para aprender más sobre Mac Miller, explorar su discografía, ver su mercancía oficial y seguir sus cuentas en redes sociales.
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para sugerir mejoras o reportar problemas.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo `LICENSE`.
 
 **Desarrollado por Adrián Daniel Ustariz Ortiz
 Este sitio web tiene como objetivo proporcionar una plataforma en línea donde los visitantes puedan explorar el trabajo de Mac Miller, Incluye secciones para la biografía del artista, una sección de discografía, con la descripción detallada de cada disco, una tienda online que permita a los usuarios hacerse con la merch del artista, así como una minisección de redes sociales, no se hizo tanto énfasis en esta sección debido a que el artista tristemente falleció.

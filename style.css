@@ -605,12 +605,13 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(9, 1fr);
-  height: 330vh;
+  height: 360vh;
   width: 80%;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-top: 50px;
+  gap: 20px;
 }
 
 #store__container div {

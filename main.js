@@ -1,7 +1,13 @@
+let carrito = [];
+
 const carritoBtn = document.getElementById("carritoBtn");
 carritoBtn.onclick = function () {
   abrirCarrito();
 };
+
+function trayendoImagenes() {
+  const contenedorProductos = document.getElementById("store__container");
+}
 
 function abrirCarrito() {
   const carrito = document.getElementById("carrito");

@@ -578,7 +578,7 @@ main {
 #store__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   height: auto;
   width: 80%;
   align-items: center;
@@ -661,6 +661,22 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+#busqueda {
+  height: 25px;
+}
+.busquedaContainer {
+  display: flex;
+  align-items: center;
+}
+.contenedorBotonesCarrito {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.botonesCarrito {
+  width: auto;
+  height: 35px;
 }
 
 @media (max-width: 1280px) {

@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nombre": "Faces Yellow Edition Vinyl",
+    "precio": 50,
+    "color": "yellow",
+    "categoria": "vinilos",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_1.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Faces 10 Year Cover Tee",
+    "precio": 30,
+    "color": "white",
+    "categoria": "camisas",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_2.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Faces 10 Year Line Drawing Tee",
+    "precio": 30,
+    "color": "white",
+    "categoria": "camisas",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_3.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Watching Movies With The Sound Off 10th Anniversary Vinyl",
+    "precio": 65,
+    "color": "red",
+    "categoria": "vinilos",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_4.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Faces 10 Year Smile Long Sleeve",
+    "precio": 40,
+    "color": "gray",
+    "categoria": "camisas",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_5.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Faces 10 Year Hoodie",
+    "precio": 80,
+    "color": "black",
+    "categoria": "hoodies",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_6.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Faces 10 Year Jacket",
+    "precio": 130,
+    "color": "red",
+    "categoria": "jackets",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_7.png"
+  },
+  {
+    "id": 8,
+    "nombre": "Faces Tee",
+    "precio": 30,
+    "color": "yellow",
+    "categoria": "camisas",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_8.png"
+  },
+  {
+    "id": 9,
+    "nombre": "Faces 10 Year Boy and Bear Hat",
+    "precio": 27,
+    "color": "green",
+    "categoria": "gorras",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_9.png"
+  },
+  {
+    "id": 10,
+    "nombre": "Faces Hoodie",
+    "precio": 65,
+    "color": "yellow",
+    "categoria": "hoodies",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_10.png"
+  },
+  {
+    "id": 11,
+    "nombre": "The Divine Feminine Standard Vinyl",
+    "precio": 37,
+    "color": "pink",
+    "categoria": "vinilos",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_11.png"
+  },
+  {
+    "id": 12,
+    "nombre": "Circles Standard Vinyl",
+    "precio": 40,
+    "color": "white",
+    "categoria": "vinilos",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_12.png"
+  },
+  {
+    "id": 13,
+    "nombre": "Circles Deluxe CD",
+    "precio": 15,
+    "color": "white",
+    "categoria": "cds",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_13.png"
+  },
+  {
+    "id": 14,
+    "nombre": "Good Am Standard Vinyl",
+    "precio": 37,
+    "color": "white",
+    "categoria": "vinilos",
+    "disponibilidad": true,
+    "cantidad": 10,
+    "imagen": "/images/t_14.png"
+  }
+]

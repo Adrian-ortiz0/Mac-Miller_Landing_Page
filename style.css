@@ -7,10 +7,10 @@ body {
   background-color: rgba(0, 0, 0, 0.926);
   align-items: center;
   justify-content: space-around;
-  position: fixed;
   width: 100%;
-  height: 5%;
-  z-index: 4;
+  height: 6%;
+  position: fixed;
+  z-index: 6;
 }
 #main_nav a {
   text-decoration: none;
@@ -28,10 +28,11 @@ body {
 header {
   display: flex;
   width: 100%;
-  height: 76vh;
+  height: 80vh;
   justify-content: space-around;
   font-family: Arial, Helvetica, sans-serif;
   align-items: center;
+  flex-wrap: wrap;
 }
 #nav__container {
   display: flex;
@@ -51,8 +52,7 @@ h3 {
   font-weight: lighter;
 }
 .image-container {
-  position: relative;
-  width: 400px;
+  width: 500px;
 }
 
 .background-image {
@@ -64,17 +64,15 @@ h3 {
 }
 
 .foreground-image {
-  position: absolute;
-  top: 50px;
-  right: -10px;
-  width: 75%;
-  z-index: 2;
+  width: 100%;
 }
 #my_nav {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
 }
+
 .my-buttons {
   width: 180px;
   height: 70px;
@@ -124,31 +122,31 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 350vh;
+  height: auto;
 }
 
 #biografia {
   display: flex;
   width: 100%;
-  height: 25%;
+  height: 70vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url(/images/wing.jpg);
   background-size: cover;
-  margin-top: 100px;
   align-items: center;
   justify-content: space-around;
+  flex-direction: row;
 }
 
 #biografia__container-foto {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 80%;
+  height: 500px;
   justify-content: space-evenly;
 }
 
 .my-buttons__biografia {
-  height: 40px;
+  height: 50px;
   width: 200px;
   border: none;
   background-color: rgba(66, 66, 66, 0.567);
@@ -169,30 +167,12 @@ main {
   background-color: rgb(255, 255, 255);
   flex-direction: column;
   width: 40%;
-  max-height: 70%;
+  height: 400px;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   padding: 40px;
   border-radius: 5px;
   overflow-y: auto;
-}
-
-@media (max-width: 768px) {
-  #biografia {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .biografia-img,
-  #descripcion__biografia {
-    max-width: 100%;
-    margin: 5px;
-  }
-
-  #descripcion__biografia {
-    width: 90%;
-    padding: 20px;
-  }
 }
 
 #descripcion__biografia h2 {
@@ -213,26 +193,17 @@ main {
 #discografia {
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: auto;
   width: 100%;
-}
-#discografia h2 {
-  background-color: black;
-  width: 100%;
-  color: white;
-  text-align: center;
-  font-family: arial;
-  font-size: 40px;
-  margin: 0;
-  height: 8vh;
+  margin-bottom: 25px;
 }
 
 #container__discografia {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
-  height: 90%;
+  height: 100%;
   width: 100%;
   position: relative;
   text-align: center;
@@ -258,6 +229,7 @@ main {
 }
 #merch {
   width: 100%;
+  height: 40%;
   height: auto;
   background-color: rgb(0, 0, 0);
 }
@@ -279,7 +251,7 @@ main {
   align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  height: 5%;
+  height: auto;
   width: 100%;
 }
 #redes-sociales__icons {
@@ -570,16 +542,14 @@ main {
   position: relative;
 }
 
-#body__store {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
 #header__store {
+  display: flex;
   width: 100%;
   height: 20%;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
 }
 
 #header__nav {
@@ -589,13 +559,18 @@ main {
   justify-content: space-around;
   width: 80%;
   height: 100%;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 #icon__store {
   display: flex;
-  width: 20%;
-  justify-content: space-between;
-  align-items: center;
+  width: auto;
+  justify-content: space-around;
+}
+#icon__store img {
+  margin-left: 15px;
+  color: white;
 }
 #myH1__store {
   font-size: 40px;
@@ -604,14 +579,15 @@ main {
 #store__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-  height: 360vh;
+  grid-template-rows: repeat(8, 1fr);
+  height: auto;
   width: 80%;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 50px;
   gap: 20px;
+  margin: auto;
+  margin-top: 50px;
 }
 
 #store__container div {
@@ -619,67 +595,77 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: auto;
+  height: 500px;
 }
 
 #store__container div img {
   cursor: pointer;
 }
 
-.scroll-arrow {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #333;
+.store__footer {
+  background-color: black;
   color: white;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
-  text-align: center;
-  line-height: 1;
-  width: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
-.scroll-arrow-up:hover {
-  background-color: #555;
-}
-
-#mobile-message {
-  display: none;
-}
-
-#mobile-message__2 {
-  display: none;
-}
-
-@media (max-width: 800px) {
-  #mobile-message {
-    display: block;
-    font-size: 2em;
-    text-align: center;
-    margin-top: 20%;
-    color: #000;
-  }
-  #mobile-message__2 {
-    display: block;
-    font-size: 2em;
-    text-align: center;
-    margin-top: 20%;
-    color: #fffcfc;
-  }
-  body > * {
-    display: none;
+@media (max-width: 1280px) {
+  header {
+    height: 100vh;
   }
   #main_nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .foreground-image {
     display: none;
   }
-  .container__albums {
+  #myH1 {
+    text-align: center;
+  }
+  .image-container {
     display: none;
   }
-  .footer__discos {
-    display: none;
+  #my_nav a {
+    margin: 3px;
+  }
+  #container__discografia {
+    grid-template-columns: repeat(2, 1fr);
   }
   #store__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 808px) {
+  #biografia__container-foto {
+    width: 70%;
+  }
+  #descripcion__biografia {
     display: none;
+  }
+  #biografia {
+    height: 70vh;
+  }
+
+  #mamiller {
+    width: 100%;
+  }
+
+  #container__discografia {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #nav__container h3 {
+    display: none;
+  }
+  #redes-sociales__icons a img {
+    width: 50px;
+  }
+  #store__container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

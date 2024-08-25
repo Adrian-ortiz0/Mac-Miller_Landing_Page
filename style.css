@@ -657,7 +657,7 @@ main {
 .opcionesCarrito {
   display: flex;
   color: white;
-  height: 200px;
+  height: auto;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -677,6 +677,11 @@ main {
 .botonesCarrito {
   width: auto;
   height: 35px;
+  background-color: white;
+  color: black;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 1280px) {

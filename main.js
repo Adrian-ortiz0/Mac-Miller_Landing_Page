@@ -1,12 +1,49 @@
 let carrito = [];
 
+const cabeceras = new Headers();
+cabeceras.set("Content-Type", "application/json");
+cabeceras.set("Content-Encoding", "br");
+
+async function peticion(url) {
+  const respuesta = await fetch(url);
+  if (respuesta.ok) {
+    const info = await respuesta.json();
+    return info;
+  } else {
+    return [];
+  }
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+//JSON imagenes
+
+let jsonImagenes = "/productos.json";
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+// Functiones - onClick
+
 const carritoBtn = document.getElementById("carritoBtn");
 carritoBtn.onclick = function () {
   abrirCarrito();
 };
 
-function trayendoImagenes() {
-  const contenedorProductos = document.getElementById("store__container");
+//--------------------------------------------------------------------------------------------------------------------//
+
+// Funciones
+
+async function trayendoImagenes() {
+  //const contenedorProductos = document.getElementById("store__container");
+  const imagenes = await peticion(jsonImagenes);
+  const contenedor = document.getElementById("store__container");
+  imagenes.forEach((imagen) => {
+    const subContenedor = document.createElement("div");
+    subContenedor.id = "0" + imagen.id;
+    subContenedor.innerHTML = `<img src=${imagen.imagen} alt="t1" />
+        <button class="botonsitos">Agregar al carrito</button>`;
+    contenedor.append(subContenedor);
+  });
 }
 
 function abrirCarrito() {
@@ -19,3 +56,5 @@ function abrirCarrito() {
     carrito.classList.add("carrito");
   }
 }
+
+trayendoImagenes();

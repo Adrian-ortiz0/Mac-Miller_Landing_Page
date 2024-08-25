@@ -652,7 +652,7 @@ main {
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
-  height: 30%;
+  height: auto;
 }
 .opcionesCarrito {
   display: flex;

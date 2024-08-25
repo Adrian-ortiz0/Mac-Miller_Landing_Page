@@ -34,7 +34,6 @@ carritoBtn.onclick = function () {
 // Funciones
 
 async function trayendoImagenes() {
-  //const contenedorProductos = document.getElementById("store__container");
   const imagenes = await peticion(jsonImagenes);
   const contenedor = document.getElementById("store__container");
   imagenes.forEach((imagen) => {
@@ -43,7 +42,15 @@ async function trayendoImagenes() {
     subContenedor.innerHTML = `<img src=${imagen.imagen} alt="t1" />
         <button class="botonsitos">Agregar al carrito</button>`;
     contenedor.append(subContenedor);
+    const boton = subContenedor.querySelector(".botonsitos");
+    boton.addEventListener("click", function () {
+      agregarAlCarrito();
+    });
   });
+}
+
+async function agregarAlCarrito() {
+  console.log("añadido");
 }
 
 function abrirCarrito() {

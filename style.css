@@ -641,7 +641,7 @@ main {
 
 .carrito-active {
   background-color: black;
-  height: 90%;
+  height: auto;
   position: absolute;
   width: 30vw;
   right: 0px;
@@ -653,6 +653,8 @@ main {
   flex-direction: row;
   justify-content: space-around;
   height: auto;
+  text-align: center;
+  margin-top: 30px;
 }
 .opcionesCarrito {
   display: flex;
@@ -661,6 +663,8 @@ main {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  width: 200px;
+  margin-bottom: 30px;
 }
 #busqueda {
   height: 25px;

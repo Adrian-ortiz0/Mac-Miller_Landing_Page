@@ -646,6 +646,8 @@ main {
   width: 30vw;
   right: 0px;
   top: 145px;
+  color: white;
+  text-align: center;
 }
 .plantillaCarrito {
   display: flex;
@@ -654,7 +656,6 @@ main {
   justify-content: space-around;
   height: auto;
   text-align: center;
-  margin-top: 30px;
 }
 .opcionesCarrito {
   display: flex;

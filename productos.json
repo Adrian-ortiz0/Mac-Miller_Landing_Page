@@ -7,7 +7,7 @@
     "categoria": "vinilos",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_1.png"
+    "imagen": "/images/t_1.PNG"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "categoria": "camisas",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_2.png"
+    "imagen": "/images/t_2.PNG"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "categoria": "camisas",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_3.png"
+    "imagen": "/images/t_3.PNG"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "categoria": "vinilos",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_4.png"
+    "imagen": "/images/t_4.PNG"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "categoria": "camisas",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_5.png"
+    "imagen": "/images/t_5.PNG"
   },
   {
     "id": 6,
@@ -57,7 +57,7 @@
     "categoria": "hoodies",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_6.png"
+    "imagen": "/images/t_6.PNG"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
     "categoria": "jackets",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_7.png"
+    "imagen": "/images/t_7.PNG"
   },
   {
     "id": 8,
@@ -77,7 +77,7 @@
     "categoria": "camisas",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_8.png"
+    "imagen": "/images/t_8.PNG"
   },
   {
     "id": 9,
@@ -87,7 +87,7 @@
     "categoria": "gorras",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_9.png"
+    "imagen": "/images/t_9.PNG"
   },
   {
     "id": 10,
@@ -97,7 +97,7 @@
     "categoria": "hoodies",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_10.png"
+    "imagen": "/images/t_10.PNG"
   },
   {
     "id": 11,
@@ -107,7 +107,7 @@
     "categoria": "vinilos",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_11.png"
+    "imagen": "/images/t_11.PNG"
   },
   {
     "id": 12,
@@ -117,7 +117,7 @@
     "categoria": "vinilos",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_12.png"
+    "imagen": "/images/t_12.PNG"
   },
   {
     "id": 13,
@@ -127,7 +127,7 @@
     "categoria": "cds",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_13.png"
+    "imagen": "/images/t_13.PNG"
   },
   {
     "id": 14,
@@ -137,6 +137,6 @@
     "categoria": "vinilos",
     "disponibilidad": true,
     "cantidad": 10,
-    "imagen": "/images/t_14.png"
+    "imagen": "/images/t_14.PNG"
   }
 ]

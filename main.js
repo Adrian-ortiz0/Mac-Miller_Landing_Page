@@ -14,17 +14,22 @@ async function peticion(url) {
   }
 }
 
-//--------------------------------------------------------------------------------------------------------------------//
-
-//JSON imagenes
-
 let jsonImagenes = "/productos.json";
 
-//--------------------------------------------------------------------------------------------------------------------//
+function guardarCarritoEnLocalStorage() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
 
-// Funciones
+function cargarCarritoDeLocalStorage() {
+  const carritoGuardado = localStorage.getItem("carrito");
+  if (carritoGuardado) {
+    carrito = JSON.parse(carritoGuardado);
+  }
+}
 
 async function trayendoImagenes() {
+  cargarCarritoDeLocalStorage();
+
   const productos = await peticion(jsonImagenes);
   const contenedor = document.getElementById("store__container");
 
@@ -48,9 +53,11 @@ async function trayendoImagenes() {
           precio: producto.precio,
           categoria: producto.categoria,
           imagen: producto.imagen,
+          cantidad: 1,
         });
       } else {
         console.log("El producto ya está en el carrito");
+        productoExistente.cantidad++;
       }
       console.log("Carrito actual:", carrito);
       actualizarCarrito();
@@ -71,22 +78,24 @@ async function trayendoImagenes() {
       carritoContenedor.classList.add("carrito");
     }
   });
+
+  actualizarCarrito();
 }
 
+// Función para actualizar el carrito
 function actualizarCarrito() {
   let total = 0;
   const carritoContenedor = document.getElementById("carrito");
   carritoContenedor.innerHTML = "";
-
-  carrito.forEach(function (item) {
+  carrito.forEach(function (item, index) {
     const divContainerProducto = document.createElement("div");
     divContainerProducto.classList.add("plantillaCarrito");
     divContainerProducto.innerHTML = `
       <img src="${item.imagen}" alt="${item.nombre}" width="150px" />
       <div class="opcionesCarrito">
         <h2>${item.nombre}</h2>
-        <p class="cantidad">1</p>
-        <h2>${item.precio}$</h2>
+        <p class="cantidad">${item.cantidad}</p>
+        <h2 class="precio">${item.precio * item.cantidad}$</h2>
         <div class="contenedorBotonesCarrito">
           <button class="botonesCarrito btnPlus">+</button>
           <button class="botonesCarrito btnMinus">-</button>
@@ -94,17 +103,41 @@ function actualizarCarrito() {
           <button class="botonesCarrito deleteBtn">Delete</button>
         </div>
       </div>`;
+
     carritoContenedor.append(divContainerProducto);
-    total += item.precio;
+    total += item.precio * item.cantidad;
+
+    const btnPlus = divContainerProducto.querySelector(".btnPlus");
+    const btnMinus = divContainerProducto.querySelector(".btnMinus");
+    const btnDelete = divContainerProducto.querySelector(".deleteBtn");
+    const textoCantidad = divContainerProducto.querySelector(".cantidad");
+
+    btnPlus.addEventListener("click", function () {
+      item.cantidad++;
+      textoCantidad.innerText = item.cantidad;
+      actualizarCarrito();
+    });
+
+    btnMinus.addEventListener("click", function () {
+      if (item.cantidad > 1) {
+        item.cantidad--;
+      } else {
+        carrito.splice(index, 1);
+      }
+      actualizarCarrito();
+    });
+
+    btnDelete.addEventListener("click", function () {
+      carrito.splice(index, 1);
+      actualizarCarrito();
+    });
   });
+
   const totalText = document.createElement("h1");
   totalText.innerText = `Total: ${total}$`;
   carritoContenedor.append(totalText);
-}
 
-const totalText = document.createElement("h2");
-const contenedorCarrito = document.getElementById("carrito");
-totalText.innerText = "Total: 0$";
-contenedorCarrito.append(totalText);
+  guardarCarritoEnLocalStorage();
+}
 
 trayendoImagenes();

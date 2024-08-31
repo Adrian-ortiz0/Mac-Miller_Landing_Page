@@ -609,6 +609,7 @@ main {
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .botonsitos {
@@ -756,6 +757,39 @@ main {
   cursor: pointer;
 }
 
+@media (max-width: 1299px){
+  .carrito-active{
+    right: 0px;
+    top: 190px;
+  }
+  .plantillaCarrito{
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 854px){
+  .carrito-active{
+    right: 0px;
+    top: 300px;
+  }
+  .plantillaCarrito{
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 712px){
+  .carrito-active{
+    width: 100%;
+    right: 0px;
+    top: 300px;
+    position: static;
+  }
+  .plantillaCarrito{
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+
 @media (max-width: 1280px) {
   header {
     height: 100vh;
@@ -786,6 +820,9 @@ main {
 }
 
 @media (max-width: 808px) {
+  #main_nav {
+    display: none;
+  }
   #biografia__container-foto {
     width: 70%;
   }

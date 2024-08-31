@@ -634,6 +634,12 @@ main {
   border: none;
   cursor: pointer;
 }
+#userBtn{
+  display: flex;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
 
 .carrito {
   display: none;
@@ -641,13 +647,22 @@ main {
 
 .carrito-active {
   background-color: black;
-  height: auto;
   position: absolute;
   width: 30vw;
   right: 0px;
   top: 145px;
   color: white;
   text-align: center;
+  overflow-y: scroll;
+  max-height: 400px;
+
+}
+.carrito-active::-webkit-scrollbar {
+  width: 8px;
+}
+.carrito-active::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
 }
 .plantillaCarrito {
   display: flex;
@@ -686,6 +701,58 @@ main {
   color: black;
   border: none;
   font-size: 20px;
+  cursor: pointer;
+}
+
+.divFinalOptions{
+  display: flex;
+  width: auto;
+  margin-bottom: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.mainLogin{
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 100vh;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.registerMain{
+  display: flex;
+  height: 500px;
+  width: 500px;
+  border-radius: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.inputsLogin{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 150px;
+}
+.buttonsLogin{
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+}
+.buttonsLogin button{
+  background-color: transparent;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.682);
+  color: white;
+  height: 35px;
+  border-radius: 5px;
+  width: 70px;
   cursor: pointer;
 }
 

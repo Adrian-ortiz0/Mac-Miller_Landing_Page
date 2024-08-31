@@ -1,8 +1,5 @@
+let usuarios = [];
 let carrito = [];
-
-const cabeceras = new Headers();
-cabeceras.set("Content-Type", "application/json");
-cabeceras.set("Content-Encoding", "br");
 
 async function peticion(url) {
   const respuesta = await fetch(url);
@@ -14,7 +11,41 @@ async function peticion(url) {
   }
 }
 
-let jsonImagenes = "/productos.json";
+let jsonImagenes = "/productos.json"
+
+function cargarUsuarioActual() {
+  const usuarioActual = localStorage.getItem("usuarioActual");
+  return usuarioActual ? JSON.parse(usuarioActual) : null;
+}
+
+function guardarUsuarioActual(usuario) {
+  localStorage.setItem("usuarioActual", JSON.stringify(usuario));
+}
+
+function agregarCarritoACompras(usuario) {
+  usuario.compras = usuario.compras.concat(carrito);
+  
+  const index = usuarios.findIndex(u => u.correo === usuario.correo);
+  if (index !== -1) {
+    usuarios[index] = usuario;
+  }
+  
+  guardarUsuariosEnLocalStorage();
+  guardarUsuarioActual(usuario); 
+  carrito.length = 0; 
+  actualizarCarrito();
+}
+
+function guardarUsuariosEnLocalStorage(){
+  localStorage.setItem("usuarios", JSON.stringify(usuarios));
+}
+
+function cargarUsuariosDeLocalStorage(){
+  const usuariosGuardados = localStorage.getItem("usuarios");
+  if (usuariosGuardados) {
+    usuarios = JSON.parse(usuariosGuardados);
+  }
+}
 
 function guardarCarritoEnLocalStorage() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -27,11 +58,20 @@ function cargarCarritoDeLocalStorage() {
   }
 }
 
-async function trayendoImagenes() {
-  cargarCarritoDeLocalStorage();
+function inicializarUsuario() {
+  cargarUsuariosDeLocalStorage();
+  const usuarioActual = cargarUsuarioActual();
+  if (usuarioActual) {
+    if (!usuarios.some(u => u.correo === usuarioActual.correo)) {
+      usuarios.push(usuarioActual);
+      guardarUsuariosEnLocalStorage();
+    }
+  }
+}
 
-  const productos = await peticion(jsonImagenes);
+function mostrarProductos(productos) {
   const contenedor = document.getElementById("store__container");
+  contenedor.innerHTML = ""; 
 
   productos.forEach((producto) => {
     const subContenedor = document.createElement("div");
@@ -56,37 +96,35 @@ async function trayendoImagenes() {
           cantidad: 1,
         });
       } else {
-        console.log("El producto ya está en el carrito");
         productoExistente.cantidad++;
       }
-      console.log("Carrito actual:", carrito);
       actualizarCarrito();
     });
   });
-
-  const verCarrito = document.getElementById("carritoBtn");
-
-  verCarrito.addEventListener("click", function () {
-    const carritoContenedor = document.getElementById("carrito");
-
-    if (!carritoContenedor.classList.contains("carrito-active")) {
-      carritoContenedor.classList.remove("carrito");
-      carritoContenedor.classList.add("carrito-active");
-      actualizarCarrito();
-    } else {
-      carritoContenedor.classList.remove("carrito-active");
-      carritoContenedor.classList.add("carrito");
-    }
-  });
-
-  actualizarCarrito();
 }
 
-// Función para actualizar el carrito
+async function trayendoImagenes() {
+  inicializarUsuario();
+  cargarCarritoDeLocalStorage();
+
+  const productos = await peticion(jsonImagenes);
+  mostrarProductos(productos);
+
+  const busquedaInput = document.getElementById("busqueda");
+  busquedaInput.addEventListener("input", function () {
+    const filtro = busquedaInput.value.toLowerCase();
+    const productosFiltrados = productos.filter((producto) =>
+      producto.categoria.toLowerCase().includes(filtro)
+    );
+    mostrarProductos(productosFiltrados);
+  });
+}
+
 function actualizarCarrito() {
   let total = 0;
   const carritoContenedor = document.getElementById("carrito");
   carritoContenedor.innerHTML = "";
+
   carrito.forEach(function (item, index) {
     const divContainerProducto = document.createElement("div");
     divContainerProducto.classList.add("plantillaCarrito");
@@ -99,8 +137,6 @@ function actualizarCarrito() {
         <div class="contenedorBotonesCarrito">
           <button class="botonesCarrito btnPlus">+</button>
           <button class="botonesCarrito btnMinus">-</button>
-          <button class="botonesCarrito buyBtn">Buy</button>
-          <button class="botonesCarrito deleteBtn">Delete</button>
         </div>
       </div>`;
 
@@ -109,7 +145,6 @@ function actualizarCarrito() {
 
     const btnPlus = divContainerProducto.querySelector(".btnPlus");
     const btnMinus = divContainerProducto.querySelector(".btnMinus");
-    const btnDelete = divContainerProducto.querySelector(".deleteBtn");
     const textoCantidad = divContainerProducto.querySelector(".cantidad");
 
     btnPlus.addEventListener("click", function () {
@@ -126,18 +161,55 @@ function actualizarCarrito() {
       }
       actualizarCarrito();
     });
-
-    btnDelete.addEventListener("click", function () {
-      carrito.splice(index, 1);
-      actualizarCarrito();
-    });
   });
-
+  
   const totalText = document.createElement("h1");
-  totalText.innerText = `Total: ${total}$`;
+  totalText.innerText = `Total: ${total}$ `;
   carritoContenedor.append(totalText);
+
+  const divFinalOptions = document.createElement("div");
+  divFinalOptions.classList.add("divFinalOptions")
+  divFinalOptions.innerHTML = `<button class="botonesCarrito" id="btnDelete">Delete</button><button class="botonesCarrito" id="btnBuy">Buy</button>`;
+  carritoContenedor.append(divFinalOptions);
+  
+  const btnDelete = document.getElementById("btnDelete");
+  btnDelete.addEventListener("click", function(){
+    borrarTodo()
+  })
+  const btnBuy = document.getElementById("btnBuy");
+  btnBuy.addEventListener("click", function(){
+    const usuarioActual = cargarUsuarioActual();
+    if (usuarioActual) {
+      agregarCarritoACompras(usuarioActual);
+      alert("Compra realizada con éxito");
+    } else {
+      alert("No se encontró un usuario activo. Inicie sesión para comprar.");
+    }
+  })
+
+  function borrarTodo(){
+    carrito.length = 0;
+    actualizarCarrito();
+  }
 
   guardarCarritoEnLocalStorage();
 }
 
-trayendoImagenes();
+const verCarrito = document.getElementById("carritoBtn");
+
+verCarrito.addEventListener("click", function () {
+  const carritoContenedor = document.getElementById("carrito");
+
+  if (!carritoContenedor.classList.contains("carrito-active")) {
+    carritoContenedor.classList.remove("carrito");
+    carritoContenedor.classList.add("carrito-active");
+    actualizarCarrito();
+  } else {
+    carritoContenedor.classList.remove("carrito-active");
+    carritoContenedor.classList.add("carrito");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  trayendoImagenes();
+});
